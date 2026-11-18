@@ -1,3 +1,5 @@
 # web_stack_debugging_2
 
 - `0-iamsomeoneelse`: runs the whoami command under the user passed as an argument
+
+- `1-run_nginx_as_nginx`: runs Nginx as the nginx user, listening on port 8080

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Runs Nginx as the nginx user and listening on port 8080
+sed -Ei 's/^\s*#?\s*user\s+[^;]*;/user nginx;/' /etc/nginx/nginx.conf
+sed -Ei 's/listen (\[::\]:)?80( |;)/listen \18080\2/' /etc/nginx/sites-available/default
+chmod 644 /etc/nginx/nginx.conf
+pkill apache2
+pkill nginx
+sudo -u nginx service nginx start
